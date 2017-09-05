@@ -332,8 +332,6 @@ vendor/lib/libchromatix_s5k5e3yx_zsl_preview_lc898122.so
 
 # Sensors
 bin/sensors.qcom
-lib64/hw/sensors.msm8953.so
-lib/hw/sensors.msm8953.so
 vendor/etc/yas_set.cfg
 vendor/lib/libyasalgo.so
 vendor/lib/libsensor1.so
