@@ -1,0 +1,2 @@
+# Init
+TARGET_LIBINIT_MSM8953_DEFINES_FILE := $(LOCAL_PATH)/init/init_j7poplte.cpp
