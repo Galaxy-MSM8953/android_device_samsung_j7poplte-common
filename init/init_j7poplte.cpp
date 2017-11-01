@@ -28,6 +28,7 @@
  */
 
 #include <init_msm8953.h>
+#include <android-base/properties.h>
 
 void init_target_properties(void)
 {
@@ -43,7 +44,7 @@ void init_target_properties(void)
 	int network_type = 1;
 
 	/* get the bootloader string */
-	std::string bootloader = property_get("ro.bootloader");
+	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
 
 	if (bootloader.find("J727P") == 0) {
 		build_id = (char *)"NRD90M";
