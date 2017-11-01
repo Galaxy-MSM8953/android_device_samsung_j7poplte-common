@@ -17,10 +17,12 @@
 LOCAL_PATH := device/samsung/j7poplte-common
 
 # Include package config fragments
-include $(COMMON_PATH)/product/*.mk
+include $(LOCAL_PATH)/product/*.mk
 
 # Include proprietary blobs
 $(call inherit-product, vendor/samsung/j7poplte-common/j7poplte-common-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+   $(LOCAL_PATH)/overlay \
+   $(LOCAL_PATH)/overlay-lineage
