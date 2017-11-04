@@ -22,6 +22,9 @@ include $(LOCAL_PATH)/product/*.mk
 # Include proprietary blobs
 $(call inherit-product, vendor/samsung/j7poplte-common/j7poplte-common-vendor.mk)
 
+# Inherit from common
+$(call inherit-product, device/samsung/msm8953-common/msm8953.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
    $(LOCAL_PATH)/overlay \
