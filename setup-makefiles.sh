@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,80 +18,17 @@
 
 set -e
 
-BOARD_COMMON=msm8953-common
-DEVICES_ALL="j7poplteusc j7popltespr"
-VENDOR=samsung
-
-INITIAL_COPYRIGHT_YEAR=2017
-
-# Load extract_utils and do some sanity checks
-MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
-
-CM_ROOT="$MY_DIR"/../../..
-DEVICE_DIR="$MY_DIR"/../$DEVICE
-DEVICE_COMMON_DIR="$MY_DIR"/../$DEVICE_COMMON
-
-# determine which blob dirs to set up
-if [ -z "$SETUP_BOARD_COMMON_DIR" ]; then
-    SETUP_BOARD_COMMON_DIR=1
-fi
-
-if [ -z "$SETUP_DEVICE_DIR" ]; then
-    SETUP_DEVICE_DIR=0
-fi
+# Required!
+export DEVICES="j7popltespr j7poplteusc"
+export DEVICE_COMMON=j7poplte-common
+export BOARD_COMMON=msm8953-common
+export VENDOR=samsung
 
 if [ -z "$SETUP_DEVICE_COMMON_DIR" ]; then
-    SETUP_DEVICE_COMMON_DIR=0
+	export SETUP_DEVICE_COMMON_DIR=1
+fi
+if [ -z "$SETUP_BOARD_COMMON_DIR" ]; then
+	export SETUP_BOARD_COMMON_DIR=0
 fi
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
-    exit 1
-fi
-. "$HELPER"
-
-if [ "$SETUP_DEVICE_COMMON_DIR" -eq 1 ] && [ -s $DEVICE_COMMON_DIR/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
-
-    # Copyright headers and guards
-    write_headers "$DEVICES"
-
-    # The standard device blobs
-    write_makefiles $DEVICE_COMMON_DIR/proprietary-files.txt
-
-    # We are done!
-    write_footers
-fi
-
-if [ "$SETUP_DEVICE_DIR" -eq 1 ] && [ -s $DEVICE_DIR/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
-
-    # Copyright headers and guards
-    write_headers
-
-    # The standard device blobs
-    write_makefiles $DEVICE_DIR/proprietary-files.txt
-
-    # We are done!
-    write_footers
-fi
-
-if  [ "$SETUP_BOARD_COMMON_DIR" -eq 1 ]; then
-   # set up the board common makefiles
-   DEVICE_COMMON=$BOARD_COMMON
-
-   # Initialize the helper
-   setup_vendor "$BOARD_COMMON" "$VENDOR" "$CM_ROOT" true
-
-   # Copyright headers and guards
-   write_headers "$DEVICES_ALL"
-
-   write_makefiles "$MY_DIR"/proprietary-files.txt
-
-   # Finish
-   write_footers
-fi
+./../../$VENDOR/$BOARD_COMMON/setup-makefiles.sh $@
