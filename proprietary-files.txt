@@ -2,6 +2,29 @@
 lib/hw/camera.msm8953.so
 
 etc/camera/msm8953_camera_j7pop.xml
+etc/camera/D05QL_s5k5e3yx_module_info.xml
+etc/camera/imx214_chromatix.xml
+etc/camera/imx219_chromatix.xml
+etc/camera/imx230_chromatix.xml
+etc/camera/imx241_chromatix.xml
+etc/camera/imx258_chromatix.xml
+etc/camera/L16OL_s5k3p3sx_module_info.xml
+etc/camera/M05QS_imx241_module_info.xml
+etc/camera/msm8952_camera.xml
+etc/camera/msm8996_camera.xml
+etc/camera/ov13850_chromatix.xml
+etc/camera/ov13850_q13v06k_chromatix.xml
+etc/camera/ov4688_chromatix.xml
+etc/camera/ov5670_chromatix.xml
+etc/camera/ov8858_chromatix.xml
+etc/camera/ov8865_chromatix.xml
+etc/camera/P08QL_s5k4h5yc_module_info.xml
+etc/camera/R08QS_imx219_module_info.xml
+etc/camera/s5k3m2xm_chromatix.xml
+etc/camera/s5k3m2xx_chromatix.xml
+etc/camera/s5k5e3yx_chromatix.xml
+etc/camera/s5k5e3yx_f2_2_chromatix.xml
+etc/camera/sr259_chromatix.xml
 
 # Camera chromatix
 vendor/lib/libchromatix_imx219_3a_4k_preview.so
