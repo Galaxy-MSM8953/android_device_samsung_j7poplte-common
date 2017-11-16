@@ -26,6 +26,10 @@ etc/camera/s5k5e3yx_chromatix.xml
 etc/camera/s5k5e3yx_f2_2_chromatix.xml
 etc/camera/sr259_chromatix.xml
 
+# Camera OIS
+vendor/lib/libois_lc898122.so
+vendor/lib/liboptizoom.so
+
 # Camera chromatix
 vendor/lib/libchromatix_imx219_3a_4k_preview.so
 vendor/lib/libchromatix_imx219_3a_4k_video.so
