@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit from common msm8953
+include device/samsung/msm8953-common/BoardConfigCommon.mk
+
 LOCAL_PATH := device/samsung/j7poplte-common
 
 # Include board config fragments
 include $(LOCAL_PATH)/board/*.mk
-
-# Inherit from common msm8953
-include device/samsung/msm8953-common/BoardConfigCommon.mk
