@@ -335,9 +335,11 @@ bin/sensors.qcom
 vendor/etc/yas_set.cfg
 vendor/lib/libyasalgo.so
 vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
 vendor/lib/sensor_calibrate.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
 vendor/lib64/libyasalgo.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/sensor_calibrate.so
