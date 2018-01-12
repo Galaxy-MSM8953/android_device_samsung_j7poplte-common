@@ -1,5 +1,5 @@
 # Camera
-lib/hw/camera.msm8953.so:lib/hw/camera.vendor.msm8953.so
+lib/hw/camera.msm8953.so
 
 etc/camera/msm8953_camera_j7pop.xml
 etc/camera/D05QL_s5k5e3yx_module_info.xml
