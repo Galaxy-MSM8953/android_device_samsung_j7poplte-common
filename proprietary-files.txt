@@ -1,5 +1,5 @@
 # Camera
-bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 
 lib/hw/camera.msm8953.so
 
@@ -532,7 +532,7 @@ etc/firmware/cpp_firmware_v1_8_0.fw
 etc/firmware/cpp_firmware_v1_10_0.fw
 
 # Sensors
-bin/sensors.qcom
+bin/sensors.qcom:vendor/bin/sensors.qcom
 lib64/hw/sensors.msm8953.so		
 lib/hw/sensors.msm8953.so
 vendor/etc/yas_set.cfg
