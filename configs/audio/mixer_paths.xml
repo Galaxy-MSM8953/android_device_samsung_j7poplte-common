@@ -1019,6 +1019,10 @@
         <ctl name="EAR PA Gain" value="POS_6_DB" />
     </path>
 
+    <path name="headphones">
+        <path name="headset" />
+    </path>
+
     <path name="speaker-and-headphones">
         <path name="spk-ear" />
         <ctl name="RX1 Digital Volume" value="56" />
