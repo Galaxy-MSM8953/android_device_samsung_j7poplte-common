@@ -33,5 +33,4 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-   $(LOCAL_PATH)/overlay \
-   $(LOCAL_PATH)/overlay-lineage
+   $(LOCAL_PATH)/overlay
