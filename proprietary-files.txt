@@ -1,3 +1,12 @@
+# ACBD Data
+etc/Bluetooth_cal.acdb
+etc/General_cal.acdb
+etc/Global_cal.acdb
+etc/Handset_cal.acdb
+etc/Hdmi_cal.acdb
+etc/Headset_cal.acdb
+etc/Speaker_cal.acdb
+
 # Camera
 bin/mm-qcamera-daemon
 
